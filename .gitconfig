@@ -1,0 +1,11 @@
+[user]
+	name = nguyenhuugiatri
+	email = nguyenhuugiatri@gmail.com
+	signingKey =
+[commit]
+	gpgSign = true
+[core]
+	excludesfile = /Users/tri.huugia.nguyen/.gitignore
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager

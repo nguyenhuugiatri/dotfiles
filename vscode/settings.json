@@ -1,0 +1,498 @@
+{
+  /* -------------------------------------------- */
+  /*                    EDITOR                    */
+  /* -------------------------------------------- */
+  // * COMMON
+  "window.title": "${rootName}${separator}${rootPath}",
+  "update.mode": "start",
+  "editor.accessibilitySupport": "off",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.wordWrap": "on",
+  "editor.linkedEditing": true,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.smoothScrolling": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.formatOnPaste": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "telemetry.telemetryLevel": "off",
+
+  // * TEXTS
+  "editor.tabSize": 2,
+  "editor.fontWeight": 550,
+  "editor.lineHeight": 22,
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontSize": 14.5,
+  "editor.fontLigatures": true,
+
+  // * EXPLORER
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.autoReveal": true,
+
+  // * CURSOR
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorWidth": 3,
+
+  // * MINIMAP
+  "editor.minimap.size": "proportional",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.scale": 2,
+  "editor.minimap.showSlider": "always",
+
+  // * BRACKET PAIR
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairsHorizontal": true,
+
+  // * SUGGESTIONS
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggestSelection": "first",
+  "editor.parameterHints.enabled": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+
+  /* -------------------------------------------- */
+  /*                   TERMINAL                   */
+  /* -------------------------------------------- */
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 3,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+
+  /* -------------------------------------------- */
+  /*                     THEME                    */
+  /* -------------------------------------------- */
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.editor.labelFormat": "short",
+  "workbench.statusBar.visible": false,
+
+  // * SCROLLBAR
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+
+  // * ICONS
+  "workbench.iconTheme": "vscode-icons",
+
+  // * COLORS
+  "workbench.colorCustomizations": {
+    "foreground": "#E6E6E6",
+    "errorForeground": "#FF4B82",
+
+    // * BADGE
+    "badge.background": "#6FC1FF",
+    "badge.foreground": "#242526",
+
+    // * PROGRESS BAR
+    "progressBar.background": "#B084EB",
+
+    // * BUTTONS
+    "button.background": "#45A9F9",
+    "button.foreground": "#FFFFFF",
+    "button.hoverBackground": "#676B79",
+    "extensionButton.prominentForeground": "#FFFFFF",
+    "extensionButton.prominentBackground": "#45A9F9",
+    "extensionButton.prominentHoverBackground": "#676B79",
+
+    // * GIT MERGE
+    "gitDecoration.ignoredResourceForeground": "#757575",
+    "diffEditor.insertedTextBackground": "#19f9d741",
+    "diffEditor.removedTextBackground": "#FF4B8241",
+    "merge.currentHeaderBackground": "#B084EB90",
+    "merge.currentContentBackground": "#B084EB40",
+    "merge.incomingHeaderBackground": "#45A9F990",
+    "merge.incomingContentBackground": "#FFB86C40",
+
+    // * EDITOR
+    "editor.background": "#242424",
+    "editor.foreground": "#E6E6E6",
+    "editorCursor.foreground": "#E6E6E6",
+    "editorRuler.foreground": "#B084EB60",
+    "editorBracketMatch.border": "#19f9d8",
+    "editorCodeLens.foreground": "#FFB86C40",
+    "editorWhitespace.foreground": "#3E4250",
+
+    "editor.selectionBackground": "#FFB86C40",
+    "editor.inactiveSelectionBackground": "#FFB86C40",
+    "editor.selectionHighlightBackground": "#6FC1FF50",
+    "editor.wordHighlightBackground": "#00000000",
+    "editor.wordHighlightStrongBackground": "#00000000",
+    "editor.findMatchBackground": "#ffe92390",
+    "editor.findMatchHighlightBackground": "#5416ff90",
+
+    "editor.lineHighlightBackground": "#75757580",
+    "editorWidget.background": "#2a2c2d",
+    "editorWidget.border": "#373B41",
+    "editorSuggestWidget.selectedBackground": "#19f9d899",
+    "editorHoverWidget.background": "#31353a",
+    "editorError.foreground": "#FF4B82",
+    "editorError.border": "#292A2B",
+    "editorWarning.foreground": "#FFCC95",
+    "editorWarning.border": "#292A2B",
+
+    // * LIST
+    "list.hoverBackground": "#292A2B",
+    "list.hoverForeground": "#f3f3f3",
+    "list.focusBackground": "#292A2B",
+    "list.focusForeground": "#19f9d8",
+    "list.activeSelectionBackground": "#37373D",
+    "list.activeSelectionForeground": "#19f9d8",
+    "list.inactiveSelectionBackground": "#37373D",
+    "list.inactiveSelectionForeground": "#19f9d8",
+    "list.highlightForeground": "#6FC1FF",
+
+    // * ACTIVITY BAR
+    "activityBar.background": "#222223",
+    "activityBar.foreground": "#E6E6E6",
+    "activityBar.border": "#222223",
+    "activityBarBadge.background": "#19f9d8",
+    "activityBarBadge.foreground": "#242526",
+
+    // * SIDE BAR
+    "sideBar.background": "#242526",
+    "sideBar.foreground": "#BBBBBB",
+    "sideBar.border": "#222223",
+
+    // * STATUS BAR
+    "statusBar.background": "#222223",
+    "statusBar.foreground": "#E6E6E6",
+    "statusBar.noFolderBackground": "#242526",
+    "statusBar.noFolderForeground": "#E6E6E6",
+    "statusBar.debuggingBackground": "#B084EB",
+    "statusBar.debuggingForeground": "#E6E6E6",
+
+    "scrollbar.shadow": "#222223",
+    "scrollbarSlider.background": "#373B4199",
+    "scrollbarSlider.activeBackground": "#757575",
+    "scrollbarSlider.hoverBackground": "#757575",
+
+    // * TITLE BAR
+    "titleBar.activeBackground": "#242526",
+    "titleBar.activeForeground": "#E6E6E6",
+    "titleBar.inactiveBackground": "#242526",
+    "titleBar.inactiveForeground": "#E6E6E6",
+
+    // * TAB BAR
+    "tab.activeBackground": "#292A2B",
+    "tab.activeForeground": "#19f9d8",
+    "tab.activeBorder": "#19f9d8",
+    "tab.inactiveBackground": "#242526",
+    "tab.inactiveForeground": "#E6E6E6",
+
+    // * MINIMAP
+    "minimap.background": "#222223",
+    "minimap.findMatchHighlight": "#5416ff90",
+    "minimap.selectionHighlight": "#FFB86C40",
+    "minimap.errorHighlight": "#FF4B82",
+    "minimap.selectionOccurrenceHighlight": "#6FC1FF50",
+    "minimapSlider.background": "#75757580",
+
+    // * OVERVIEW RULER
+    "editorOverviewRuler.border": "#00000000",
+    "editorOverviewRuler.modifiedForeground": "#00000000",
+    "editorOverviewRuler.addedForeground": "#00000000",
+    "editorOverviewRuler.deletedForeground": "#00000000",
+    "editorOverviewRuler.errorForeground": "#FF4B82",
+    "editorOverviewRuler.warningForeground": "#FFCC95",
+    "editorOverviewRuler.infoForeground": "#00000000",
+    "editorOverviewRuler.findMatchForeground": "#5416ff90",
+    "editorOverviewRuler.wordHighlightStrongForeground": "#6FC1FF50",
+
+    // * GUTTER
+    "editorGutter.modifiedBackground": "#00000000",
+    "editorGutter.addedBackground": "#00000000",
+    "editorGutter.deletedBackground": "#00000000",
+
+    // * PANEL
+    "panel.background": "#242526"
+  },
+
+  /* -------------------------------------------- */
+  /*                      GIT                     */
+  /* -------------------------------------------- */
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.defaultDateShortFormat": null,
+  "gitlens.defaultTimeFormat": null,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.telemetry.enabled": false,
+
+  /* -------------------------------------------- */
+  /*                   FORMATTER                  */
+  /* -------------------------------------------- */
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  "eslint.validate": ["javascript", "typescriptreact", "javascriptreact"],
+
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.tsserver.log": "off",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "[javascript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
+  /* -------------------------------------------- */
+  /*                     EMMET                    */
+  /* -------------------------------------------- */
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  /* -------------------------------------------- */
+  /*                     FILES                    */
+  /* -------------------------------------------- */
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.associations": {
+    "*.txml": "xml",
+    "*.tcss": "css",
+    "*.sjs": "javascript",
+    "*.mdx": "markdown",
+    "*.jsx": "javascriptreact",
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    "*.tsx": "typescriptreact",
+    ".env.*": "dotenv",
+    ".prettierrc": "json"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/_build": true,
+    "**/dist": true,
+    "**/_build.nosync": true,
+    "**/deps": true,
+    "**/.idea": true,
+    "**/.bundle": true,
+    "**/cover": true,
+    "**/coverage": true,
+    "**/*.lock": true,
+    "**/*.svg": true,
+    "**/.DS_Store": true,
+    "**/.hg": true
+  },
+
+  /* -------------------------------------------- */
+  /*                  EXTENSIONS                  */
+  /* -------------------------------------------- */
+  "extensions.ignoreRecommendations": true,
+
+  // * PRETTIER
+  "prettier.singleQuote": true,
+
+  // * MATCHING TAG
+  "highlight-matching-tag.showRuler": false,
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "name": {
+        "custom": {
+          "borderWidth": "2px",
+          "borderColor": "#19f9d8",
+          "borderStyle": "solid",
+          "borderRadius": "4px",
+          "right": "10px"
+        }
+      }
+    }
+  },
+
+  // * COMMENT DIVIDER
+  "comment-divider.length": 50,
+
+  // * HTMLTAGWRAP
+  "htmltagwrap.tag": "div",
+  "htmltagwrap.autoDeselectClosingTag": true,
+
+  // * SPELL CHECKER
+  "cSpell.language": "en",
+  "cSpell.userWords": [
+    "antd",
+    "axie",
+    "axieinfinity",
+    "Axies",
+    "chakra",
+    "clsx",
+    "Cosmestic",
+    "dango",
+    "DEEPLINK",
+    "dotenv",
+    "Emptyable",
+    "fastify",
+    "feedbackwidget",
+    "gapi",
+    "Geetest",
+    "hstack",
+    "Imgur",
+    "immer",
+    "instanceof",
+    "jupiter",
+    "katana",
+    "macbook",
+    "MATCHA",
+    "middlewares",
+    "mixpanel",
+    "mochi",
+    "monaco",
+    "multicall",
+    "nestjs",
+    "NEXTAUTH",
+    "npmrc",
+    "Numberish",
+    "ofetch",
+    "OIDC",
+    "omni",
+    "pallas",
+    "pnpm",
+    "prefetch",
+    "preproduction",
+    "qrcode",
+    "rjsfs",
+    "rocketseat",
+    "ronin",
+    "rotion",
+    "Signin",
+    "skymavis",
+    "snakelize",
+    "svgr",
+    "Swiper",
+    "Thirdweb",
+    "tini",
+    "trpc",
+    "unfollow",
+    "unform",
+    "unmark",
+    "upsert",
+    "usedapp",
+    "Viem",
+    "vstack",
+    "wagmi",
+    "walletconnect",
+    "workerpool",
+    "WRON",
+    "zustand"
+  ],
+
+  // * TABNINE
+  "tabnine.experimentalAutoImports": true,
+
+  // * PEACOCK
+  "peacock.keepBadgeColor": true,
+  "peacock.keepForegroundColor": true,
+  "peacock.favoriteColors": [
+    {
+      "name": "Mochi Blue",
+      "value": "#111A2F"
+    },
+    {
+      "name": "Mochi Red",
+      "value": "#2D1419"
+    },
+    {
+      "name": "Mochi Green",
+      "value": "#0D2018"
+    },
+    {
+      "name": "Dango Purple",
+      "value": "#1D0A3C"
+    },
+    {
+      "name": "Mochi Yellow",
+      "value": "#2C1F13"
+    },
+    {
+      "name": "Just Green",
+      "value": "#3b510b"
+    },
+    {
+      "name": "Pinking",
+      "value": "#910296"
+    },
+    {
+      "name": "Sky Blue",
+      "value": "#035a80"
+    },
+    {
+      "name": "Nexus",
+      "value": "#cd2b08"
+    },
+    {
+      "name": "Xanh rêu",
+      "value": "#413d10"
+    },
+    {
+      "name": "Tím đẹp",
+      "value": "#875387"
+    },
+    {
+      "name": "Tím lạt",
+      "value": "#6726cf"
+    },
+    {
+      "name": "Xanh dương đẹp",
+      "value": "#19005c"
+    }
+  ],
+
+  // * PACKAGE JSON UPGRADE
+  "package-json-upgrade.decorationString": "%s",
+  "package-json-upgrade.majorUpgradeColorOverwrite": "#757575",
+  "package-json-upgrade.minorUpgradeColorOverwrite": "#757575",
+  "package-json-upgrade.patchUpgradeColorOverwrite": "#757575",
+  "package-json-upgrade.prereleaseUpgradeColorOverwrite": "#757575",
+
+  // * ERROR LENS
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+
+  // * COLOR HIGHLIGHT
+  "color-highlight.markRuler": false,
+
+  // GITHUB COPILOT
+  "github.copilot.enable": {
+    "*": true
+  }
+}
