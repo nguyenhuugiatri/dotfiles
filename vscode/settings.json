@@ -16,11 +16,11 @@
   "editor.scrollBeyondLastLine": false,
   "editor.formatOnPaste": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
-  "telemetry.telemetryLevel": "off",
+  "editor.minimap.enabled": true,
 
   // * TEXTS
   "editor.tabSize": 2,
-  "editor.fontWeight": 550,
+  "editor.fontWeight": 600,
   "editor.lineHeight": 22,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontSize": 14.5,
@@ -50,7 +50,7 @@
   "editor.guides.bracketPairsHorizontal": true,
 
   // * SUGGESTIONS
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnEnter": "smart",
   "editor.suggestSelection": "first",
   "editor.parameterHints.enabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -78,7 +78,9 @@
   /* -------------------------------------------- */
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.labelFormat": "short",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.orientation": "vertical",
 
   // * SCROLLBAR
   "editor.scrollbar.vertical": "hidden",
@@ -167,7 +169,7 @@
     "sideBar.border": "#222223",
 
     // * STATUS BAR
-    "statusBar.background": "#222223",
+    "statusBar.background": "#242424",
     "statusBar.foreground": "#E6E6E6",
     "statusBar.noFolderBackground": "#242526",
     "statusBar.noFolderForeground": "#E6E6E6",
@@ -241,7 +243,12 @@
     "source.organizeImports": "never"
   },
 
-  "eslint.validate": ["javascript", "typescriptreact", "javascriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
 
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -266,7 +273,10 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
 
   /* -------------------------------------------- */
@@ -387,15 +397,19 @@
     "OIDC",
     "omni",
     "pallas",
+    "Passwordless",
     "pnpm",
     "prefetch",
     "preproduction",
+    "Pwdless",
     "qrcode",
     "rjsfs",
     "rocketseat",
     "ronin",
+    "roninchain",
     "rotion",
     "Signin",
+    "SIWE",
     "skymavis",
     "snakelize",
     "svgr",
@@ -408,6 +422,7 @@
     "unmark",
     "upsert",
     "usedapp",
+    "uuidv",
     "Viem",
     "vstack",
     "wagmi",
@@ -417,12 +432,10 @@
     "zustand"
   ],
 
-  // * TABNINE
-  "tabnine.experimentalAutoImports": true,
-
   // * PEACOCK
   "peacock.keepBadgeColor": true,
   "peacock.keepForegroundColor": true,
+  "peacock.affectStatusBar": false,
   "peacock.favoriteColors": [
     {
       "name": "Mochi Blue",
@@ -485,14 +498,6 @@
   "package-json-upgrade.patchUpgradeColorOverwrite": "#757575",
   "package-json-upgrade.prereleaseUpgradeColorOverwrite": "#757575",
 
-  // * ERROR LENS
-  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
-
   // * COLOR HIGHLIGHT
-  "color-highlight.markRuler": false,
-
-  // GITHUB COPILOT
-  "github.copilot.enable": {
-    "*": true
-  }
+  "color-highlight.markRuler": false
 }

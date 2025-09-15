@@ -1,6 +1,9 @@
+# vi ~/.gitconfig
+# vi ~/.gitconfig
+
 [user]
 	name = nguyenhuugiatri
-	email = nguyenhuugiatri@gmail.com
+	email =
 	signingKey =
 [commit]
 	gpgSign = true
