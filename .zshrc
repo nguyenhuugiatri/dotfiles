@@ -1,78 +1,74 @@
-# Configure color-scheme
-COLOR_SCHEME=dark # dark/light
+# ============================== ENVIRONMENT ===============================
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="/opt/homebrew/bin:$PATH"
 
-#ZSH variable
-export ZSH="/Users/tri.huugia.nguyen/.oh-my-zsh"
-export PATH=/opt/homebrew/bin:$PATH
-source $ZSH/oh-my-zsh.sh
-export PNPM_HOME="/Users/tri.huugia.nguyen/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
-# Set iTerm2 tab title text
-function title_text {
-    echo -ne "\033]0;"$*"\007"
-}
-title_text Lem\'s iTerm2
-
-# --------------------------------- ALIASES -----------------------------------
-# vi
-command -v vim > /dev/null && alias vi='nvim'
-command -v vim > /dev/null && alias vim='nvim'
-# ls & tree
-command -v ls > /dev/null && alias ls='lsd --group-dirs first' && \
-    alias tree='lsd --tree'
-# top
-command -v ytop > /dev/null && alias top='ytop --per-cpu'
-# cat & less
-command -v bat > /dev/null && \
-    alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
-    alias cat='bat --pager=never' && \
-    alias less='bat'
-
-# ----------------------------------- MISC -----------------------------------
+# Editor
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-# colorize man pages
-export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[1;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
-export LESSHISTFILE=-
+# PNPM
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
-# ------------------------------- ZSH SETTINGS --------------------------------
-# ----- options -----
-unsetopt NO_BEEP
-unsetopt NO_MATCH
-setopt AUTO_CD
-setopt BEEP
-setopt NOMATCH
-setopt NOTIFY
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-setopt HIST_BEEP
-setopt INTERACTIVE_COMMENTS
-setopt MAGIC_EQUAL_SUBST
-setopt NULL_GLOB
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+# Ruby
+export LC_ALL=en_US.UTF-8
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# # Java
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+
+# # Android SDK
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# # Android tools vào PATH
+# export PATH="$PATH:$ANDROID_HOME/emulator"
+# export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+# History
 HISTFILE="$HOME/.cache/zsh_history"
-HIST_STAMPS=mm/dd/yyyy
-DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
 SAVEHIST=5000
+HIST_STAMPS=mm/dd/yyyy
+LESSHISTFILE=-
+
+# Color scheme (dark/light)
+COLOR_SCHEME=dark
+
+# ============================== TOOLCHAINS ================================
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+# Bun completions
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
+
+# Rbenv
+eval "$(rbenv init -)"
+
+# ============================== OH-MY-ZSH ================================
+source $ZSH/oh-my-zsh.sh
+plugins=(git)
+
+# ============================== ZSH SETTINGS ==============================
+unsetopt NO_BEEP NO_MATCH
+setopt AUTO_CD BEEP NOMATCH NOTIFY INC_APPEND_HISTORY SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST HIST_IGNORE_DUPS HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS HIST_SAVE_NO_DUPS HIST_REDUCE_BLANKS HIST_VERIFY
+setopt HIST_BEEP INTERACTIVE_COMMENTS MAGIC_EQUAL_SUBST NULL_GLOB
+
+DISABLE_UPDATE_PROMPT=true
 ZLE_RPROMPT_INDENT=0
 
-# ----- keys -----
+# Keybindings
 bindkey '^[[2~' overwrite-mode
 bindkey '^[[3~' delete-char
 bindkey '^[[H' beginning-of-line
@@ -85,16 +81,40 @@ bindkey '^[[3;5~' kill-word
 bindkey '^[[5~' beginning-of-buffer-or-history
 bindkey '^[[6~' end-of-buffer-or-history
 
-# ----- plugins -----
-plugins=(git)
-source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/git-open/git-open.plugin.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
+# ============================== ALIASES ===================================
+# vi
+command -v vim >/dev/null && alias vi='nvim' && alias vim='nvim'
 
-# -------------------------------- POWERLEVEL ---------------------------------
-source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-POWERLEVEL9K_MODE='nerdfont-complete'
+# ls & tree
+command -v lsd >/dev/null && alias ls='lsd --group-dirs first' && alias tree='lsd --tree'
+
+# top
+command -v ytop >/dev/null && alias top='ytop --per-cpu'
+
+# bat
+if command -v bat >/dev/null; then
+  alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")'
+  alias cat='bat --pager=never'
+  alias less='bat'
+fi
+
+# ============================== UI / UX ===================================
+# iTerm2 tab title
+function title_text { echo -ne "\033]0;$*\007"; }
+title_text "Lem's iTerm2"
+
+# man page colors
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# Powerlevel10k
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+POWERLEVEL9K_MODE=nerdfont-complete
 s=' ' # fix too wide icons
 POWERLEVEL9K_MODE=nerdfont-complete
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_beginning
@@ -125,7 +145,6 @@ POWERLEVEL9K_VCS_UNSTAGED_ICON=±
 POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=↓
 POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=↑
 POWERLEVEL9K_VCS_COMMIT_ICON=$s
-POWERLEVEL9K_EXECUTION_TIME_ICON=$s
 POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
@@ -156,29 +175,17 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator ssh dir dir_writable v
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status command_execution_time background_jobs time ram)
 ZLE_RPROMPT_INDENT=0
 
-# -------------------------------- NVM ------------------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# -------------------------------- Z ---------------------------------------
+# ============================== EXTRA PLUGINS =============================
+# z
 [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
 
-# -------------------------------- COLORLS ---------------------------------
-source $(dirname $(gem which colorls))/tab_complete.sh
+# colorls
+source /opt/homebrew/lib/ruby/gems/3.4.0/gems/colorls-1.5.0/lib/tab_complete.sh
+
+# https://github.com/zsh-users/zsh-syntax-highlighting?tab=readme-ov-file#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
 
 # bun completions
 [ -s "/Users/tri.huugia.nguyen/.bun/_bun" ] && source "/Users/tri.huugia.nguyen/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="/Users/tri.huugia.nguyen/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
-# golang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
