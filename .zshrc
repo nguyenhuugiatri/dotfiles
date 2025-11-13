@@ -23,14 +23,14 @@ export LC_ALL=en_US.UTF-8
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # # Java
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # # Android SDK
-# export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # # Android tools vào PATH
-# export PATH="$PATH:$ANDROID_HOME/emulator"
-# export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 # History
 HISTFILE="$HOME/.cache/zsh_history"
@@ -83,7 +83,7 @@ bindkey '^[[6~' end-of-buffer-or-history
 
 # ============================== ALIASES ===================================
 # vi
-command -v vim >/dev/null && alias vi='nvim' && alias vim='nvim'
+# command -v vim >/dev/null && alias vi='nvim' && alias vim='nvim'
 
 # ls & tree
 command -v lsd >/dev/null && alias ls='lsd --group-dirs first' && alias tree='lsd --tree'

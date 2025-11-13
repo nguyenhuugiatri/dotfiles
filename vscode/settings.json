@@ -78,7 +78,7 @@
   /* -------------------------------------------- */
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.labelFormat": "short",
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": false,
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.orientation": "vertical",
 
@@ -247,7 +247,12 @@
     "javascript",
     "typescript",
     "typescriptreact",
-    "javascriptreact"
+    "javascriptreact",
+    "dockercompose",
+    "yaml",
+    "markdown",
+    "json",
+    "jsonc"
   ],
 
   "javascript.suggest.autoImports": true,
@@ -273,7 +278,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
@@ -376,6 +381,7 @@
     "feedbackwidget",
     "gapi",
     "Geetest",
+    "Gmails",
     "hstack",
     "Imgur",
     "immer",
