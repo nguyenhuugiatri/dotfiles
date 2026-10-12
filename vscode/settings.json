@@ -1,10 +1,22 @@
 {
   /* -------------------------------------------- */
+  /*                   WORKBENCH                  */
+  /* -------------------------------------------- */
+  "window.title": "${rootName}${separator}${rootPath}",
+  "update.mode": "start",
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.labelFormat": "short",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.view.showQuietly": {
+    "workbench.panel.output": true
+  },
+
+  /* -------------------------------------------- */
   /*                    EDITOR                    */
   /* -------------------------------------------- */
   // * COMMON
-  "window.title": "${rootName}${separator}${rootPath}",
-  "update.mode": "start",
   "editor.accessibilitySupport": "off",
   "editor.semanticHighlighting.enabled": false,
   "editor.renderLineHighlight": "gutter",
@@ -14,9 +26,7 @@
   "editor.detectIndentation": false,
   "editor.smoothScrolling": true,
   "editor.scrollBeyondLastLine": false,
-  "editor.formatOnPaste": false,
-  "security.workspace.trust.untrustedFiles": "newWindow",
-  "editor.minimap.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
 
   // * TEXTS
   "editor.tabSize": 2,
@@ -32,12 +42,18 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.autoReveal": true,
+  "explorer.confirmPasteNative": false,
 
   // * CURSOR
   "editor.cursorBlinking": "smooth",
   "editor.cursorWidth": 3,
 
+  // * SCROLLBAR
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+
   // * MINIMAP
+  "editor.minimap.enabled": true,
   "editor.minimap.size": "proportional",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 60,
@@ -69,6 +85,9 @@
   "terminal.integrated.cursorWidth": 3,
   "terminal.integrated.fontFamily": "Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -76,15 +95,7 @@
   /* -------------------------------------------- */
   /*                     THEME                    */
   /* -------------------------------------------- */
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.editor.labelFormat": "short",
-  "workbench.statusBar.visible": false,
-  "workbench.layoutControl.enabled": false,
-  "workbench.activityBar.orientation": "vertical",
-
-  // * SCROLLBAR
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.horizontal": "hidden",
+  "workbench.colorTheme": "Dark+",
 
   // * ICONS
   "workbench.iconTheme": "vscode-icons",
@@ -219,7 +230,10 @@
     "editorGutter.deletedBackground": "#00000000",
 
     // * PANEL
-    "panel.background": "#242526"
+    "panel.background": "#242526",
+
+    // * TABS
+    "editorGroupHeader.connectedTabsBackground": "#00000000"
   },
 
   /* -------------------------------------------- */
@@ -237,6 +251,7 @@
   /* -------------------------------------------- */
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
@@ -267,7 +282,7 @@
   },
   "[typescript]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascriptreact]": {
     "editor.autoClosingBrackets": "always",
@@ -278,7 +293,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
@@ -505,5 +520,12 @@
   "package-json-upgrade.prereleaseUpgradeColorOverwrite": "#757575",
 
   // * COLOR HIGHLIGHT
-  "color-highlight.markRuler": false
+  "color-highlight.markRuler": false,
+
+  /* -------------------------------------------- */
+  /*                    AI CHAT                   */
+  /* -------------------------------------------- */
+  "chat.viewSessions.orientation": "stacked",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "claudeCode.preferredLocation": "panel"
 }

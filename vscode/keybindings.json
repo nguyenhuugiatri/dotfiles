@@ -2,6 +2,7 @@
   /* -------------------------------------------- */
   /*              REMOVE DEFAULT KEYS             */
   /* -------------------------------------------- */
+  // * EDITOR GROUPS
   {
     "key": "cmd+1",
     "command": "-workbench.action.focusFirstEditorGroup"
@@ -34,6 +35,8 @@
     "key": "cmd+8",
     "command": "-workbench.action.focusEighthEditorGroup"
   },
+
+  // * EDITOR TABS
   {
     "key": "ctrl+1",
     "command": "-workbench.action.openEditorAtIndex1"
@@ -70,19 +73,11 @@
     "key": "ctrl+9",
     "command": "-workbench.action.openEditorAtIndex9"
   },
+
+  // * WINDOW
   {
     "key": "cmd+q",
     "command": "-workbench.action.quit"
-  },
-  {
-    "key": "ctrl+shift+`",
-    "command": "-workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
   },
   {
     "key": "cmd+r",
@@ -98,6 +93,39 @@
     "key": "ctrl+w",
     "command": "-workbench.action.switchWindow"
   },
+
+  // * NAVIGATION
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+
+  // * TERMINAL
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+
+  // * NOTEBOOK & MARKDOWN
+  {
+    "key": "shift+cmd+v",
+    "command": "-notebook.cell.pasteAbove",
+    "when": "notebookEditorFocused && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+
+  // * EXTENSIONS
   {
     "key": "cmd+x",
     "command": "-clipring.cutToRing",
@@ -109,29 +137,22 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+cmd+v",
-    "command": "-notebook.cell.pasteAbove",
-    "when": "notebookEditorFocused && !inputFocus"
+    "key": "ctrl+cmd+p",
+    "command": "-projectSwitcher.switch"
   },
   {
-    "key": "shift+cmd+v",
-    "command": "-markdown.showPreview",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward",
-    "when": "canNavigateForward"
+    "key": "ctrl+cmd+o",
+    "command": "-projectSwitcher.gotoLast"
   },
 
   /* -------------------------------------------- */
   /*               NEW KEY BINDINGS               */
   /* -------------------------------------------- */
+  // * EDITOR TABS
   {
     "key": "cmd+1",
     "command": "workbench.action.openEditorAtIndex1"
   },
-
   {
     "key": "cmd+2",
     "command": "workbench.action.openEditorAtIndex2"
@@ -164,22 +185,8 @@
     "key": "cmd+9",
     "command": "workbench.action.openEditorAtIndex9"
   },
-  {
-    "key": "cmd+t cmd+h",
-    "command": "peacock.changeColorToFavorite"
-  },
-  {
-    "key": "ctrl+cmd+t",
-    "command": "workbench.files.action.collapseExplorerFolders"
-  },
-  {
-    "key": "ctrl+cmd+r",
-    "command": "workbench.files.action.refreshFilesExplorer"
-  },
-  {
-    "key": "ctrl+shift+`",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
+
+  // * WINDOW
   {
     "key": "shift+cmd+r",
     "command": "workbench.action.reloadWindow"
@@ -188,9 +195,45 @@
     "key": "ctrl+cmd+w",
     "command": "workbench.action.quickSwitchWindow"
   },
+
+  // * NAVIGATION
   {
     "key": "ctrl+=",
     "command": "workbench.action.navigateForward",
     "when": "canNavigateForward"
+  },
+
+  // * EXPLORER
+  {
+    "key": "ctrl+cmd+t",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "ctrl+cmd+r",
+    "command": "workbench.files.action.refreshFilesExplorer"
+  },
+
+  // * TERMINAL
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001b\r"
+    },
+    "when": "terminalFocus"
+  },
+
+  // * EXTENSIONS
+  {
+    "key": "cmd+t cmd+h",
+    "command": "peacock.changeColorToFavorite"
+  },
+  {
+    "key": "cmd+m",
+    "command": "projectSwitcher.switch"
   }
 ]
